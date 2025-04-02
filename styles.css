@@ -25,3 +25,61 @@
         margin: 0;
         min-height: 100vh;
     }
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      /* Vertical Line */
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(to bottom, #f1f1f1, #f0f0f0);
+        transform: translateX(-50%);
+      }
+      
+      /* Circles */
+      .timeline-circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #4ea9ad;
+        border: 3px solid white;
+        box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.3);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      /* Content Boxes */
+      .timeline-item {
+        padding: 20px 0;
+        position: relative;
+        width: 50%;
+      }
+      
+      .timeline-item:nth-child(odd) {
+        padding-right: 50px;
+        text-align: right;
+        left: 0;
+      }
+      
+      .timeline-item:nth-child(even) {
+        padding-left: 50px;
+        text-align: left;
+        left: 50%;
+      }
+      
+      .timeline-content {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
